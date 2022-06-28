@@ -7,14 +7,14 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class AvaliacaoComponent {
 
-  @Input()
+  @Input() //usado para receber dados do componente-pai
   avaliacao: number = 0;
 
-  @Output()
-  reavaliacao = new EventEmitter<number>();
+  @Output() //usado para enviar dados para o componente-pai
+  avaliacaoChange = new EventEmitter<number>();
 
   reavaliar(i: number){
-    this.reavaliacao.emit(i);
+    this.avaliacaoChange.emit(i); //usado para enviar dados para o componente-pai
   }
 
 }

@@ -16,12 +16,4 @@ export class AppComponent {
     {titulo: "Jogos Vorazes", nota: 3}
   ]
 
-  // reavaliar(i:number, titulo:string){
-  //   this.filmes.forEach(item => {
-  //     if(item.titulo == titulo){
-  //       item.nota = i;
-  //     }
-  //   })
-  // }
-
 }

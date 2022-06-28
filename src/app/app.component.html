@@ -1,12 +1,25 @@
-<h2>Filmes</h2>
-<table>
-  <tr>
-    <th>Titulo</th>
-    <th>Nota</th>
-  </tr>
-  <tr *ngFor="let filme of filmes">
-    <td>{{filme.titulo}}</td>
-    <td><app-avaliacao [avaliacao]="filme.nota" (reavaliacao)="filme.nota = $event"></app-avaliacao>
-    </td>
-  </tr>
-</table>
+<app-painel titulo="Filmes">
+
+  <table>
+    <tr>
+      <th>Titulo</th>
+      <th>Nota</th>
+    </tr>
+    <tr *ngFor="let filme of filmes">
+      <td>{{filme.titulo}}</td>
+      <td>
+        <app-avaliacao
+          [(avaliacao)]="filme.nota"
+        >
+        </app-avaliacao>
+      </td>
+    </tr>
+  </table>
+
+</app-painel>
+
+<app-painel titulo="Series">
+
+  <div>Segunda Seção - Series</div>
+
+</app-painel>

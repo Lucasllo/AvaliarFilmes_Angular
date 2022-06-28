@@ -1,0 +1,6 @@
+<h1>
+  {{titulo}}
+  <button (click)="expandir_ocultar()" *ngIf="!expandir">+</button>
+  <button (click)="expandir_ocultar()" *ngIf="expandir">-</button>
+</h1>
+<ng-content *ngIf="expandir"></ng-content>
